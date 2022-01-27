@@ -1,12 +1,13 @@
 def isPalindrome(str):
-
-    rev = ''.join(reversed(str))
-
-    if (str == rev):
-        return True
+    if type(str) == int or float:
+        raise TypeError("enter a string")
     else:
-        return False
- 
+        rev = ''.join(reversed(str))
+        if (str == rev):
+            return True
+        else:
+            return False
+
 str = input("Enter a string")
 ans = isPalindrome(str)
  
